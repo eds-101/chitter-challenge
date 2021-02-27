@@ -6,6 +6,38 @@ Chitter Challenge
 * If you have a partial solution, **still check in a partial solution**
 * You must submit a pull request to this repo with your code by 9am Monday morning
 
+
+## How to use
+### To set up the project
+Clone this repository and then run:
+```
+bundle install
+```
+
+### To set up the database
+
+Connect to `psql` and create the `chitter` database:
+
+```
+CREATE DATABASE chitter;
+```
+
+To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
+### To run the Chitter app:
+
+```
+rackup -p 3000
+```
+
+To view bookmarks, navigate to `localhost:3000/chitter`
+
+### To run tests:
+
+```
+rspec
+
+
 Challenge:
 -------
 
