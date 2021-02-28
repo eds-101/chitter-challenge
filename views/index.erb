@@ -3,7 +3,7 @@
 
 <ul>
 <% @peeps.each do |message| %>
-  <li> <%= message %>  </li>
+  <li> <%= message.message %> @ <%= message.time[0..15]%> </li>
 <% end %>
 
 </ul>
