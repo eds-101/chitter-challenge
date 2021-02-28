@@ -1,0 +1,1 @@
+CREATE TABLE messages(id SERIAL PRIMARY KEY, username VARCHAR(40), message VARCHAR(140), time TIMESTAMP);

@@ -1,0 +1,23 @@
+<h1> Welcome to Chitter. </h1>
+<h2> Posted peeps: </h2>
+
+<ul>
+<% @peeps.each do |message| %>
+  <li> <%= message %>  </li>
+<% end %>
+
+</ul>
+
+
+<h1> Post a peep below! </h1>
+
+<form action='/new_peep' method='post'>
+
+  <label for='name'> Enter your name:
+    <input type='text' name='name'>
+  </label>
+    <label for='peep'> Enter a peep:
+    <input type='text' name='peep' placeholder='140 chars max'>
+  </label>
+  <input type='submit' value='Post'>
+</form>
