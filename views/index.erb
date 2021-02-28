@@ -2,7 +2,7 @@
 <h2> Posted peeps: </h2>
 
 <ul>
-<% @peeps.each do |message| %>
+<% @peeps.reverse.each do |message| %>
   <li> <%= message.message %> @ <%= message.time[0..15]%> </li>
 <% end %>
 
