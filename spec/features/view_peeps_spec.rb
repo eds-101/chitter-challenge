@@ -1,7 +1,7 @@
 require 'pg'
 
 feature "Viewing peeps" do
-  scenario "a user can see peep messages" do
+  scenario "a user can see peep messages from Chitter" do
     connection = PG.connect(dbname: 'chitter_test')
 
     # Add the test data

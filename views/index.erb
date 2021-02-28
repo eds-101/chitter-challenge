@@ -1,5 +1,24 @@
 <ul>
   <% @peeps.each do |peep| %>
-    <li> <% peep %> </li><br>
+    <li> <% p peep %> </li>
+    <br>
   <% end %>
 </ul>
+
+
+<h2> Post a new Peep on Chitter </h2>
+
+<form action="/new_peep" method="post">
+  
+  <label for='name'>
+  Enter your name:
+  <input type='text' name='name' > <br>
+  </label>
+
+  <label for='new_peep'>
+  Peep here:
+  <input type='text' name='peep' placeholder='Write your peep here'>
+  </label>
+  <br>
+  <input type="submit" value="Post Peep" >
+</form>

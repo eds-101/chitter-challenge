@@ -6,9 +6,9 @@ describe Peeps do
       connection = PG.connect(dbname: 'chitter_test')
 
       #add test data
-      connection.exec("INSERT INTO peeps VALUES(1, 'Marcus', 'Doritos are really tasty', current_timestamp);")
-      connection.exec("INSERT INTO peeps VALUES(2, 'Laila', 'Suns out', current_timestamp);")
-      connection.exec("INSERT INTO peeps VALUES(3, 'Jacques', 'Missing real life tbh', current_timestamp);")
+      connection.exec("INSERT INTO peeps (sender, peep, time) VALUES( 'Marcus', 'Doritos are really tasty', current_timestamp);")
+      connection.exec("INSERT INTO peeps (sender, peep, time) VALUES( 'Laila', 'Suns out', current_timestamp);")
+      connection.exec("INSERT INTO peeps (sender, peep, time) VALUES( 'Jacques', 'Missing real life tbh', current_timestamp);")
 
       peeps = Peeps.history
       

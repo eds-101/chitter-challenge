@@ -1,5 +1,11 @@
 language: ruby
 
+before_install:
+  - gem install bundler
+  - gem install rake
+
+rvm: 2.7.0
+
 services:
   - postgresql
 
@@ -7,4 +13,5 @@ before_script:
   - psql -U postgres -c 'CREATE DATABASE chitter_test;'
 
 script:
+  - bundle exec rake create_tables
   - bundle exec rspec
