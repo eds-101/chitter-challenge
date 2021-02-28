@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/peeps copy'
+require './lib/peeps'
 
 class Chitter < Sinatra::Base
   enable :sessions, :method_override
@@ -16,10 +16,9 @@ class Chitter < Sinatra::Base
 
   post '/new_peep' do
     p params
-    @name = params[:name]
-    @peep = params[:peep]
-    new_peep = [@name, @peep]
-    @peeps << new_peep
+    username = params[:username]
+    peep = params[:peep]
+    Peeps.new(username: username, peep: peep)
     redirect '/'
   end
 
